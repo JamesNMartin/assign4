@@ -1,0 +1,152 @@
+/* TODO VALIDATION: PASSED */
+
+body {
+    background-color: #080705;
+}
+
+h1 {
+    color: #FFFFFA;
+}
+h1.title {
+    font-family: monospace;
+    color: #FFFFFA;
+}
+h2 {
+    font-family: monospace;
+    color: #FFFFFA;
+}
+h5 {
+    color: #FFFFFA;
+    font-family: monospace;
+}
+h4 {
+    color: #FFFFFA;
+    font-family: monospace;
+}
+h6 {
+    color: #FFFFFA;
+    font-family: monospace;
+}
+a:link { /* UNVISITED LINK */
+    color: #FFFFFA;
+    font-family: monospace;
+    text-decoration-line: none;
+
+}
+label {
+    font-family: monospace;
+    color: #FFFFFA;
+}
+form {
+    font-family: monospace;
+    color: #FFFFFA;
+}
+a:visited {
+    color: #FFFFFA;
+}
+a:hover {
+    color: #BB0A21;
+}
+body {
+     margin-top: 50px;
+     margin-left: 200px;
+     margin-right: 200px;
+ }
+.navbar {
+    overflow: hidden;
+    background-color: #080705;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    font-family: monospace;
+    color: #FFFFFA;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    font-family: monospace;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #515052;
+    font-family: monospace;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFA;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #080705;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #BB0A21;
+    color: #FFFFFA;
+    font-style: italic;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+img {
+    float: none;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+p {
+    font-family: monospace;
+    color: #FFFFFA;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    flex: 50%;
+    padding: 0 4px;
+    float: none; /* USING LEFT OR RIGHT MADE THE SPACING TERRIBLE USED NONE */
+}
+
+.column img {
+    margin-top: 4px;
+    vertical-align: middle;
+    float: none; /* USING LEFT OR RIGHT MADE THE SPACING TERRIBLE USED NONE */
+}
+#shirts {
+    color-interpolation-filters: sRGB; /* no idea what this does im sorry I needed to style a class */
+}
+
+
+
+
+
+
+
