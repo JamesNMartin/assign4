@@ -47,11 +47,12 @@ a:visited {
 a:hover {
     color: #BB0A21;
 }
-body {
-     margin-top: 50px;
-     margin-left: 200px;
-     margin-right: 200px;
- }
+body.support {
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
 .navbar {
     overflow: hidden;
     background-color: #080705;
@@ -143,10 +144,3 @@ p {
 #shirts {
     color-interpolation-filters: sRGB; /* no idea what this does im sorry I needed to style a class */
 }
-
-
-
-
-
-
-

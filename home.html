@@ -1,4 +1,4 @@
-<!-- TODO VALIDATION: WARNING, NO h2-h6 HEADER FOR SECTION ROW -->
+<!-- TODO VALIDATION:  -->
 
 
 <!DOCTYPE html>
@@ -7,12 +7,17 @@
     <meta charset="UTF-8">
     <title>Offline Apparel</title> <!-- THE <title> TAG WILL CHANGE THE TEXT IN THE TAB BAR -->
     <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/tubeular.js"></script>
+
+    <!-- Pull JQuery from google CDN -->
 </head>
 <body>
-    <header>
-        <h1 class="title">OFFLINE APPAREL</h1>
-    </header>
-    <nav class="navbar"><!-- NAVBAR AND DROPDOWN CODE TAKEN FROM https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+<section id="wrapper">
+<header>
+    <h1 class="title">OFFLINE APPAREL</h1>
+</header>
+<nav class="navbar"><!-- NAVBAR AND DROPDOWN CODE TAKEN FROM https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
         <span class="dropdown">
             <button class="dropbtn">&#9776; &#11208; Home <!-- UNOCODE NUMBERS WERE TAKEN FROM HERE http://xahlee.info/comp/unicode_arrows.html -->
             </button>
@@ -26,41 +31,70 @@
             </span>
         </span>
     </nav>
-    <!-- Photo Grid -->
-    <section class="row"><!-- IMAGE GRID CODE WAS TAKEN FROM https://www.w3schools.com/howto/howto_js_image_grid.asp -->
+<!-- Photo Grid -->
+<script>
+        $(document).ready(function () {
+            $('#wrapper').tubular({videoId: 'mEqcala-NiE'});//CODE FOR THIS WAS TAKEN FROM HERE http://www.seanmccambridge.com/tubular/
+
+            $('body').css('display', 'none'); //GOT THIS CODE FROM HERE https://css-tricks.com/forums/topic/fade-out-between-pages/
+            $('body').fadeIn(1000);
+            $('.link').click(function() {
+
+                event.preventDefault();
+
+                newLocation = this.href;
+
+                $('body').fadeOut(1000, newpage);
+
+            });
+            function newpage() {
+
+                window.location = newLocation;
+
+            }
+            $('.resizeImage').mouseenter(function() {//CODE FOR THIS WAS TAKEN FROM HERE.
+                $(this).stop().animate({ width: "+=3%", height: "+=3%" }, 200);
+            });
+            $('.resizeImage').mouseleave(function() {
+                var x = $(this).attr('width'),
+                    y = $(this).attr('height');
+                $(this).stop().animate({ width: x, height: y }, 200);
+            });
+        })
+    </script>
+    <section class="row">
+        <h2>--</h2><!-- IMAGE GRID CODE WAS TAKEN FROM https://www.w3schools.com/howto/howto_js_image_grid.asp -->
         <section class="column">
             <h4>SHIRTS</h4>
-            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" height="300" width="300" alt="shirt"></a><!-- SADLY I MADE THE BAGS 300x300 JUST TO KEEP CONSISTANT. UGLY BUT ITS TEMP. -->
-            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" height="300" width="300" alt="shirt"></a>
-            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" height="300" width="300" alt="shirt"></a>
-            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" height="300" width="300" alt="shirt"></a>
-            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" height="300" width="300" alt="shirt"></a>
+            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" class="resizeImage" height="300" width="300" alt="shirt"></a><!-- SADLY I MADE THE BAGS 300x300 JUST TO KEEP CONSISTANT. UGLY BUT ITS TEMP. -->
+            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" class="resizeImage" height="300" width="300" alt="shirt"></a>
+            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" class="resizeImage" height="300" width="300" alt="shirt"></a>
+            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" class="resizeImage" height="300" width="300" alt="shirt"></a>
+            <a href="inventory/shirts.html"><img src="images/shirts/blkShirt.jpg" class="resizeImage" height="300" width="300" alt="shirt"></a>
         </section>
         <section class="column">
             <h4>BEANIES</h4>
-            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" height="300" width="300" alt="beanie"></a>
-            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" height="300" width="300" alt="beanie"></a>
-            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" height="300" width="300" alt="beanie"></a>
-            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" height="300" width="300" alt="beanie"></a>
-            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" height="300" width="300" alt="beanie"></a>
-
+            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" class="resizeImage" height="300" width="300" alt="beanie"></a>
+            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" class="resizeImage" height="300" width="300" alt="beanie"></a>
+            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" class="resizeImage" height="300" width="300" alt="beanie"></a>
+            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" class="resizeImage" height="300" width="300" alt="beanie"></a>
+            <a href="inventory/hats.html"><img src="images/hats/blkBeanie.jpg" class="resizeImage" height="300" width="300" alt="beanie"></a>
         </section>
         <section class="column">
             <h4>SWEATSHIRTS</h4>
-            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" height="300" width="300" alt="sweatshirt"></a>
-            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" height="300" width="300" alt="sweatshirt"></a>
-            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" height="300" width="300" alt="sweatshirt"></a>
-            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" height="300" width="300" alt="sweatshirt"></a>
-            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" height="300" width="300" alt="sweatshirt"></a>
+            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" class="resizeImage" height="300" width="300" alt="sweatshirt"></a>
+            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" class="resizeImage" height="300" width="300" alt="sweatshirt"></a>
+            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" class="resizeImage" height="300" width="300" alt="sweatshirt"></a>
+            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" class="resizeImage" height="300" width="300" alt="sweatshirt"></a>
+            <a href="inventory/sweatshirts.html"><img src="images/sweatshirts/blkSweatshirt.png" class="resizeImage" height="300" width="300" alt="sweatshirt"></a>
         </section>
         <section class="column">
             <h4>BAGS</h4>
-            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" width="300"></a>
-            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" width="300"></a>
-            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" width="300"></a>
-            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" width="300"></a>
-            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" width="300"></a>
-
+            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" class="resizeImage" width="300"></a>
+            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" class="resizeImage" width="300"></a>
+            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" class="resizeImage" width="300"></a>
+            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" class="resizeImage" width="300"></a>
+            <a href="inventory/bags.html"><img alt="bag" height="300" src="images/bags/blkBag.jpg" class="resizeImage" width="300"></a>
         </section>
     </section>
     <hr/>
@@ -69,6 +103,7 @@
             <a href="contact/support.html">CONTACT</a>
         </p>
     </footer>
+</section>
 </body>
 </html>
 
